@@ -1,6 +1,6 @@
 ﻿namespace Day1AdventOfCode
 {
-    internal class Food
+    public class Food
     {
         public Food(int calories)
         {

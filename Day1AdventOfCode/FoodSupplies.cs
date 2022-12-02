@@ -8,5 +8,10 @@
         {
             _foods.Add(food);
         }
+
+        public int TotalCalories()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
