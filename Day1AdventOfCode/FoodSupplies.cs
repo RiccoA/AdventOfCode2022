@@ -11,7 +11,8 @@
 
         public int TotalCalories()
         {
-            throw new NotImplementedException();
+            //return _foods.Sum(food => food.Calories);
+            return 0;
         }
     }
 }

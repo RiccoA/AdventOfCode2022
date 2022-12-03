@@ -4,8 +4,9 @@
     {
         public Food(int calories)
         {
-            Calories = calories;
+            Calories = new Calories(calories);
         }
-        public int Calories { get; private set; }
+
+        public Calories Calories { get; private init; }
     }
 }
