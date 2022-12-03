@@ -39,5 +39,10 @@
         {
             return base.GetHashCode();
         }
+
+        public int toInt()
+        {
+            return CalorieCount;
+        }
     }
 }

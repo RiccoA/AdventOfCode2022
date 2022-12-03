@@ -11,8 +11,7 @@
 
         public int TotalCalories()
         {
-            //return _foods.Sum(food => food.Calories);
-            return 0;
+            return _foods.Sum(food => food.Calories.toInt());
         }
     }
 }
