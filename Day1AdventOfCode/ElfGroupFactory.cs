@@ -11,7 +11,11 @@
 
         public ElfGroup CreateGroup()
         {
-            throw new NotImplementedException();
+            var group = new ElfGroup();
+
+            group.AddElves(_elfSource.GetElves());
+
+            return group;
         }
 
     }

@@ -1,9 +1,14 @@
 ﻿namespace Day1AdventOfCode
 {
-    internal class Elf
+    public class Elf
     {
         private FoodSupplies _foodSupplies = new FoodSupplies();
 
-        public void AddToFoodSupply(Food food) => _foodSupplies.AddFood(food);
+        public void AddFoodToSupply(Food food) => _foodSupplies.AddFood(food);
+
+        public int GetTotalCalorieCount()
+        {
+            return _foodSupplies.TotalCalories();
+        }
     }
 }
