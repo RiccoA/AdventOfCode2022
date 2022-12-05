@@ -24,34 +24,9 @@
 
         public int GetTop3HighesTotalOfCalories()
         {
+            var topElves = new TopElves(3, _elves);
 
-            IList<Elf> top3Elves  = new List<Elf>();
-
-            foreach(var elf in _elves)
-            {
-                if (top3Elves.Count < 3)
-                {
-                    top3Elves.Add(elf);
-                    top3Elves.OrderBy(elf => elf.GetTotalCalorieCount());
-                    continue;
-                }
-
-
-                bool elfAdded = false;
-                for (int topElfIndex = 0; topElfIndex < 3; topElfIndex++)
-                {
-                    var topElf = top3Elves.ElementAt(topElfIndex);
-                    if (!elfAdded && elf.GetTotalCalorieCount() > topElf.GetTotalCalorieCount())
-                    {
-                        top3Elves.RemoveAt(topElfIndex);
-                        top3Elves.Insert(topElfIndex, elf);
-                        elfAdded = true;
-                    }
-
-                }
-            }
-
-            return top3Elves.Sum(elf => elf.GetTotalCalorieCount());
+            return topElves.GetTopTotalCalories();
         }
 
         private int returnHighestValue(int value1, int value2)
