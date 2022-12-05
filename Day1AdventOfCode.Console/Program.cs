@@ -13,5 +13,6 @@ var elfGroup = elfGroupFactory.CreateGroup();
 var highestTotalCalories = elfGroup.GetTop3HighesTotalOfCalories();
 Console.WriteLine("The highest total of calories amoungst the grouop is {0}", highestTotalCalories);
 
-Console.WriteLine("Pres any key to exit...");
+Console.WriteLine("Press any key to exit...");
+Console.ReadKey();
 

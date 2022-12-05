@@ -11,15 +11,9 @@
 
         public int GetHighestTotalOfCalories()
         {
-            var highestTotal = 0;
+            var topElves = new TopElves(1, _elves);
 
-            foreach(var elf in _elves)
-            {
-                highestTotal = returnHighestValue(highestTotal, elf.GetTotalCalorieCount());
-            }
-
-            return highestTotal;
-
+            return topElves.GetTopTotalCalories();
         }
 
         public int GetTop3HighesTotalOfCalories()
@@ -27,16 +21,7 @@
             var topElves = new TopElves(3, _elves);
 
             return topElves.GetTopTotalCalories();
-        }
 
-        private int returnHighestValue(int value1, int value2)
-        {
-            if (value2 > value1)
-            {
-                return value2;
-            }
-
-            return value1;
         }
     }
 }
