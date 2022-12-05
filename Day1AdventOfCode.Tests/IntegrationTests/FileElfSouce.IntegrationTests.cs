@@ -24,15 +24,24 @@ namespace Day1AdventOfCode.Tests.IntegrationTests
 
             var elfSource = new FileElfSource(path);
 
-            var elves = elfSource.GetElves();
             var elfGroupFactory = new ElfGroupFactory(elfSource);
             var elfGroup = elfGroupFactory.CreateGroup();
 
             elfGroup.GetHighestTotalOfCalories().Should().Be(24000);
-
-
         }
 
+        [Fact]
+        public void FileElfSource_HasCorrectTop3Total_WhenLoadingFile()
+        {
+            var path = "IntegrationTests/Resources/test_data.txt";
+
+            var elfSource = new FileElfSource(path);
+
+            var elfGroupFactory = new ElfGroupFactory(elfSource);
+            var elfGroup = elfGroupFactory.CreateGroup();
+
+            elfGroup.GetTop3HighesTotalOfCalories().Should().Be(45000);
+        }
 
     }
 }

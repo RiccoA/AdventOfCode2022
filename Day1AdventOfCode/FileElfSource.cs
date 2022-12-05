@@ -28,6 +28,11 @@
                 }
             }
 
+            if (elf.GetTotalCalorieCount() > 0)
+            {
+                elves.Add(elf);
+            }
+
             return elves;
         }
 
